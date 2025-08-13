@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Service Reliability App</title>
+    <style>
+      :root { -webkit-text-size-adjust: 100%; }
+      html, body { height: 100%; margin: 0; }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        color: CanvasText;
+        background: Canvas;
+        padding: calc(env(safe-area-inset-top)) calc(env(safe-area-inset-right)) calc(env(safe-area-inset-bottom)) calc(env(safe-area-inset-left));
+        padding: calc(constant(safe-area-inset-top)) calc(constant(safe-area-inset-right)) calc(constant(safe-area-inset-bottom)) calc(constant(safe-area-inset-left));
+      }
+      header {
+        display: flex;
+        align-items: center;
+        gap: .75rem;
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid ButtonBorder;
+        position: sticky;
+        top: 0;
+        backdrop-filter: saturate(120%) blur(6px);
+      }
+      .title { font-size: clamp(18px, 4vw, 22px); font-weight: 600; flex: 1; text-align: center; }
+      .logo { height: 28px; display: inline-block; }
+      main { padding: 1rem; }
+      table { width: 100%; border-collapse: collapse; }
+      th, td { text-align: left; padding: .75rem; }
+      th { font-size: 0.9rem; opacity: .8; border-bottom: 1px solid ButtonBorder; }
+      tr + tr td { border-top: 1px solid ButtonBorder; }
+      footer { display: flex; align-items: center; justify-content: center; gap: .5rem; padding: .75rem 1rem; border-top: 1px solid ButtonBorder; }
+      .powered { font-size: .9rem; opacity: .8; }
+      .footer-logo { height: 24px; display: inline-block; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img class="logo" alt="HSBC logo" src="header_logo.png" />
+      <div class="title">Service Reliability App</div>
+      <span style="width:28px;height:28px;display:inline-block"></span>
+    </header>
+
+    <main>
+      <h2 id="services" style="margin:0 0 .5rem 0; font-size:1.05rem">Services</h2>
+      <table aria-describedby="services">
+        <thead>
+          <tr>
+            <th scope="col">Service</th>
+            <th scope="col">Owner</th>
+            <th scope="col">RAG</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Service 1</td>
+            <td>Damian</td>
+            <td><a href="service1.html">R</a></td>
+          </tr>
+          <tr>
+            <td>Service 2</td>
+            <td>Peter</td>
+            <td>A</td>
+          </tr>
+          <tr>
+            <td>Service 3</td>
+            <td>Jane</td>
+            <td>G</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+
+    <footer>
+      <span class="powered">Powered by</span>
+      <img class="footer-logo" alt="Company logo" src="footer_logo.png" />
+    </footer>
+  </body>
+</html>
